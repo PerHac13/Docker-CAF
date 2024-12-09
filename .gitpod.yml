@@ -1,0 +1,18 @@
+# .gitpod.yml
+image:
+  file: Dockerfile
+
+tasks:
+  - init: |
+      mkdir -p build && cd build && cmake .. # Prepare the build directory
+    command: |
+      cd build && make # Default task to build the project
+
+ports:
+  - port: 8080
+    onOpen: notify
+
+vscode:
+  extensions:
+    - ms-vscode.cpptools # C++ Tools for VS Code
+
