@@ -16,3 +16,19 @@ vscode:
   extensions:
     - ms-vscode.cpptools # C++ Tools for VS Code
 
+# above one is with docker
+
+# .gitpod.yml
+# onCreate:
+#   # Runs only the first time a new workspace is created
+#   - chmod +x configure.sh
+#   - ./configure.sh
+
+# tasks:
+#   # Runs every time the workspace is started
+#   - command: |
+#       mkdir -p build && cd build && cmake .. && make
+
+# vscode:
+#   extensions:
+#     - ms-vscode.cpptools # C++ tools for debugging and development
