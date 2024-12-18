@@ -1,0 +1,15 @@
+tasks:
+    command-0:
+        command: |
+            cd build && make # Default task to build the project
+        dependsOn:
+            - init-000
+        description: init task migrated from .gitpod.yml
+        name: 'Task 0: command'
+        triggeredBy:
+            - postDevcontainerStart
+    init-000:
+        command: |
+            mkdir -p build && cd build && cmake .. # Prepare the build directory
+        description: init task migrated from .gitpod.yml
+        name: 'Task 0: init'
